@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=1024, user-scalable=no">
+
+  <title>Sensible Home</title>
+
+  <!-- Required stylesheet -->
+  <link rel="stylesheet" media="screen" href="core/deck.core.css">
+
+  <!-- Extension CSS files go here. Remove or add as needed. -->
+  <link rel="stylesheet" media="screen" href="extensions/goto/deck.goto.css">
+  <link rel="stylesheet" media="screen" href="extensions/menu/deck.menu.css">
+  <link rel="stylesheet" media="screen" href="extensions/navigation/deck.navigation.css">
+  <link rel="stylesheet" media="screen" href="extensions/status/deck.status.css">
+  <link rel="stylesheet" media="screen" href="extensions/scale/deck.scale.css">
+
+  <!-- Style theme. More available in /themes/style/ or create your own. -->
+  <link rel="stylesheet" media="screen" href="themes/style/swiss.css">
+
+  <!-- Transition theme. More available in /themes/transition/ or create your own. -->
+  <link rel="stylesheet" media="screen" href="themes/transition/horizontal-slide.css">
+
+  <!-- Basic black and white print styles -->
+  <link rel="stylesheet" media="print" href="core/print.css">
+
+  <!-- Required Modernizr file -->
+  <script src="modernizr.custom.js"></script>
+</head>
+<body>
+  <div class="deck-container">
+
+    <!-- Begin slides. Just make elements with a class of slide. -->
+    <section class="slide">
+      <h1>Sensible Home</h1>
+    </section>
+
+    <section class="slide">
+      <h1>Last year</h1>
+    </section>
+
+    <section class="slide">
+			<h2>What was implemented</h2>
+			<ul>
+				<li>Temperature and Humidity visibility</li>
+				<li>Arduino</li>
+				<li>DHT22 using ehternet cabling</li>
+				<li>Custom rrdtool frontend on a pi</li>
+			</ul>
+
+			<h2>Old future plans</h2>
+			<ul>
+				<li>Thermostate control</li>
+				<li>Graphite</li>
+			</ul>
+
+			<h2>Tips received</h2>
+				<li>Openhr20</li>
+
+    </section>
+
+    <section class="slide">
+      <h1>Today</h1>
+    </section>
+
+    <section class="slide">
+	<h2>Current status: the bad</h1>
+	<ul>
+		<li>NEST</li>
+		<li>Digital radiator valves (hr20)s installed but not used</li>
+  </ul>
+
+  <table>
+  <tr>
+	<td><img src="nest.jpg"></td>
+	<td><img src="openhr20.jpg"></td>
+  </tr>
+  </table>
+    </section>
+
+    <section class="slide">
+	<h2>Current status: the good</h1>
+	<ul>
+		<li>pi</li>
+		<li>TMP for outdoor temp</li>
+		<li>NEST readout</li>
+		<li>Graphite</li>
+	</ul>
+    </section>
+
+    <section class="slide">
+      <h2>Today: DS18B20 Waterproof Digital Temperature Probe</h2>
+	<img src="ds18b20.jpg">
+    </section>
+
+    <section class="slide">
+	<h2>Today: One pi to rule them all</h2>
+	<img src="pi.jpg">
+    </section>
+
+    <section class="slide">
+	<h2>Today: Custom code</h2>
+
+	<ul>
+	<li>pynest</li>
+	<li>DS18b20</li>
+	<li>DHT22</li>
+	</ul>
+
+	<pre>
+[general]
+carbonhost = graphite.maxlan.be
+carbonport = 2003
+units = C
+
+[nest]
+user =
+password =
+	</pre>
+    </section>
+
+  <!-- NEW SLIDE -->
+  <section class="slide">
+    <h2>Today: Testing</h2>
+	  <ul>
+	    <li>Wireless sensors</li>
+	    <li>433Mhz <img src="433.jpg"></li>
+	    <li>2.4GHz</li>
+	  </ul>
+  </section>
+
+  <!-- NEW SLIDE -->
+  <section class="slide">
+    <h2>Today: Tomorrow</h2>
+	  <ul>
+	    <li>Water meter monitoring</li>
+	    <li>Gas meter monitoring</li>
+	    <li>Power monitoring</li>
+	  </ul>
+  </section>
+
+  <!-- NEW SLIDE -->
+  <section class="slide">
+    <h2>Tomorrow: Water</h2>
+    Flukso probe
+    <img src="water_probe.jpg">
+    <img src="water2.jpg">
+  </section>
+
+  <!-- NEW SLIDE -->
+  <section class="slide">
+    <h2>Tomorrow: Gas</h2>
+    Flukso probe
+    <img src="gas.jpg">
+    <img src="gas2.jpg">
+  </section>
+
+  <!-- NEW SLIDE -->
+  <section class="slide">
+    <h2>Tomorrow: Power usage</h2>
+    Current clamp
+    <img src="current.jpg">
+    AC/AC convertor
+    <img src="acac.jpg">
+  </section>
+
+  <!-- NEW SLIDE -->
+  <section class="slide">
+    <h2>Pointers</h2>
+    <h3>http://www.pilight.org/</h3>
+  </section>
+
+
+    <!-- End slides. -->
+
+
+
+
+
+
+    <!-- Begin extension snippets. Add or remove as needed. -->
+
+    <!-- deck.navigation snippet -->
+    <div aria-role="navigation">
+      <a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
+      <a href="#" class="deck-next-link" title="Next">&#8594;</a>
+    </div>
+
+    <!-- deck.status snippet -->
+    <p class="deck-status" aria-role="status">
+      <span class="deck-status-current"></span>
+      /
+      <span class="deck-status-total"></span>
+    </p>
+
+    <!-- deck.goto snippet -->
+    <form action="." method="get" class="goto-form">
+      <label for="goto-slide">Go to slide:</label>
+      <input type="text" name="slidenum" id="goto-slide" list="goto-datalist">
+      <datalist id="goto-datalist"></datalist>
+      <input type="submit" value="Go">
+    </form>
+
+    <!-- End extension snippets. -->
+  </div>
+
+<!-- Required JS files. -->
+<script src="jquery.min.js"></script>
+<script src="core/deck.core.js"></script>
+
+<!-- Extension JS files. Add or remove as needed. -->
+<script src="extensions/menu/deck.menu.js"></script>
+<script src="extensions/goto/deck.goto.js"></script>
+<script src="extensions/status/deck.status.js"></script>
+<script src="extensions/navigation/deck.navigation.js"></script>
+<script src="extensions/scale/deck.scale.js"></script>
+
+<!-- Initialize the deck. You can put this in an external file if desired. -->
+<script>
+  $(function() {
+    $.deck('.slide');
+  });
+</script>
+</body>
+</html>
